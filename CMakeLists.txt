@@ -8,6 +8,8 @@ set(CMAKE_CXX_FLAGS                 "${CMAKE_CXX_FLAGS} -DIL_STD -m64 -Wall -ldl
 set(CMAKE_INCLUDE_SYSTEM_FLAG_CXX   "-isystem ")
 set(LINKER_OPTIONS                  "-Wl,--export-dynamic")
 
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 add_executable(ilp_part Main.cpp IlpReadHypergraph.cpp)
 install(TARGETS ilp_part)
 
