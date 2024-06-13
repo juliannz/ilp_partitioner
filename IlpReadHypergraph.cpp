@@ -146,6 +146,7 @@ std::vector<float> Hypergraph::MultiplyFactor(const std::vector<float> a,
 std::vector<std::vector<float>> Hypergraph::GetVertexBalance() {
   std::vector<float> vertex_balance = GetTotalVertexWeights();
   if (num_parts_ == 2) {
+    std::cout << "Total weight " << vertex_balance.front() << std::endl;
     vertex_balance =
         MultiplyFactor(vertex_balance, (ub_factor_ + 50.0) / 100.0);
   } else {
